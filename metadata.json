@@ -4,7 +4,7 @@
   "author": "bberst",
   "summary": "This module will manage nginx",
   "license": "Apache-2.0",
-  "source": "https://github.com/bberst/puppet-nginx.git",
+  "source": "git@github.com:bberst/puppet-nginx.git",
   "project_page": "https://github.com/bberst/puppet-nginx",
   "issues_url": "https://github.com/bberst/puppet-nginx/issues",
   "dependencies": [
