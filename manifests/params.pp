@@ -11,7 +11,7 @@ class nginx::params {
   $config_pid_file = '/run/nginx.pid'
 
   $config_vdir_enable = $facts['os']['family'] ? {
-    'Debian' => $config_dir,
+    'Debian' => "${config_dir}",
     default  => undef,
   }
 
@@ -19,18 +19,18 @@ class nginx::params {
     'Debian' => 'www-data',
     default  => 'nginx',
   }
-
+  
   $vhost_dir = $facts['os']['family'] ? {
-    'Debian' => "${config_dir}/sites-enabled",
-    default  => $config_confd,
+    'Debian' => "${config_dir}/sites-avaliable",
+    default  => "${config_confd}"
   }
-
+  
   $service_name = 'nginx'
   $service_ensure = 'running'
   $service_pattern = 'nginx'
   $service_enable = true
   $service_hasstatus = true
   $service_hasrestart = true
-                
+  
   $docroot = '/usr/share/nginx'
 }
